@@ -1,0 +1,89 @@
+.driver-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .driver-card:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .driver-card-header {
+    height: 0.5rem;
+  }
+  
+  .driver-card-content {
+    padding: 1.5rem;
+  }
+  
+  .driver-card-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .driver-photo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    object-fit: cover;
+    margin-right: 1rem;
+  }
+  
+  .driver-details {
+    flex: 1;
+  }
+  
+  .driver-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  
+  .driver-category {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    color: white;
+    display: inline-block;
+  }
+  
+  .driver-points {
+    text-align: center;
+  }
+  
+  .driver-points-value {
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  
+  .driver-points-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+  
+  .driver-metadata {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: #4b5563;
+    margin-bottom: 0.75rem;
+  }
+  
+  .info-label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .license-status {
+    text-align: center;
+    padding: 0.25rem 0;
+    border-radius: 9999px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+  }

@@ -1,0 +1,78 @@
+.driver-table-container {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .driver-table-scroll {
+    overflow-x: auto;
+  }
+  
+  .driver-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .driver-table-header {
+    background-color: #e5e7eb;
+  }
+  
+  .driver-table-cell {
+    text-align: left;
+    padding: 1rem;
+  }
+  
+  .points-cell {
+    text-align: center;
+  }
+  
+  .status-cell {
+    text-align: center;
+  }
+  
+  .driver-row-even {
+    background-color: white;
+  }
+  
+  .driver-row-odd {
+    background-color: #f9fafb;
+  }
+  
+  .driver-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .driver-table-photo {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    margin-right: 0.75rem;
+  }
+  
+  .driver-table-name {
+    font-weight: 500;
+  }
+  
+  .category-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    color: white;
+    display: inline-block;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    width: 100%;
+    padding: 0.25rem 0;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .points-cell {
+    font-weight: 700;
+  }
