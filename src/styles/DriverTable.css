@@ -56,11 +56,12 @@
   }
   
   .category-badge {
+    display: inline-block;
     padding: 0.25rem 0.5rem;
     border-radius: 9999px;
     font-size: 0.75rem;
+    font-weight: 600;
     color: white;
-    display: inline-block;
   }
   
   .status-badge {
@@ -88,4 +89,46 @@
   .info-value {
     display: flex;
     align-items: center;
+  }
+
+
+  .category-f2 {
+    background-color: #dc2626;
+  }
+  
+  .category-f3 {
+    background-color: #2563eb; 
+  }
+  
+  .category-f4 {
+    background-color: #16a34a; 
+  }
+  
+  .category-fregional {
+    background-color: #ca8a04; 
+  }
+  
+  .category-wec {
+    background-color: #9333ea;
+  }
+  
+  .category-indycar {
+    background-color: #db2777; 
+  }
+  
+  .category-default {
+    background-color: #4b5563; 
+  }
+  
+  
+  .license-eligible {
+    background-color: #16a34a;
+  }
+  
+  .license-close {
+    background-color: #ca8a04; 
+  }
+  
+  .license-not-eligible {
+    background-color: #ef4444; 
   }

@@ -1,14 +1,14 @@
 import { LicenseStatus } from "./types";
 
-export const getCategoryColor = (category: 'F2' | 'F3' | 'F4' | 'FRegional' | 'WEC' | 'IndyCar'): string => {
+export const getCategoryColor = (category: 'Formula 2' | 'Formula 3' | 'Formula 4' | 'FRegional' | 'WEC' | 'IndyCar'): string => {
     switch(category){
-        case 'F2': return 'bg-red-600'
-        case 'F3': return 'bg-blue-600'
-        case 'F4': return 'bg-green-600'
-        case 'FRegional': return 'bg-yellow-600'
-        case 'WEC': return 'bg-purple-600'
-        case 'IndyCar': return 'bg-pink-600'
-        default: return 'bg-gray-600'
+        case 'Formula 2': return 'category-f2'
+        case 'Formula 3': return 'category-f3'
+        case 'Formula 4': return 'category-f4'
+        case 'FRegional': return 'category-fregional'
+        case 'WEC': return 'category-wec'
+        case 'IndyCar': return 'category-indycar'
+        default: return 'category-default'
     }
 }
 
@@ -20,7 +20,7 @@ export const getLicenseStatus = (points:number): LicenseStatus => {
 
 export const getCountryFlag = (nationality:string): string => {
     const flags: {[key:string]: string} = {
-        'British': '🇬🇧',
+    'British': '🇬🇧',
     'Italian': '🇮🇹',
     'German': '🇩🇪',
     'French': '🇫🇷',
