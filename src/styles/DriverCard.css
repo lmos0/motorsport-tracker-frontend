@@ -87,3 +87,17 @@
     font-size: 0.875rem;
     margin-top: 1rem;
   }
+
+  .country-flag {
+    font-size: 1.25rem; 
+    margin-right: 0.5rem; 
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    
+  }
+  
+  .info-value {
+    display: flex;
+    align-items: center;
+  }

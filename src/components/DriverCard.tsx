@@ -1,6 +1,6 @@
 import React from "react";
 import { Driver } from "../utils/types";
-import { getCategoryColor, getLicenseStatus } from "../utils/utils";
+import { getCategoryColor, getLicenseStatus, getCountryFlag } from "../utils/utils";
 
 import '../styles/DriverCard.css'
 
@@ -42,7 +42,7 @@ const DriverCard: React.FC<DriverCardPropos> = ({driver}) => {
           </div>
           <div className="country-info">
             <div className="info-label">Nationality</div>
-            <div className="info-value">{driver.nationality}</div>
+            <div className="info-value">{driver.nationality} <span className="country-flag">{getCountryFlag(driver.nationality)}</span></div>
           </div>
         </div>
         

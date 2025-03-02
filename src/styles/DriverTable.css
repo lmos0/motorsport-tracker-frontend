@@ -76,3 +76,16 @@
   .points-cell {
     font-weight: 700;
   }
+
+  .country-flag {
+    font-size: 1.25rem; 
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    
+  }
+  
+  .info-value {
+    display: flex;
+    align-items: center;
+  }

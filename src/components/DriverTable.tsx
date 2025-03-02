@@ -1,6 +1,6 @@
 import React from 'react'
 import { Driver } from '../utils/types'
-import { getCategoryColor, getLicenseStatus } from '../utils/utils'
+import { getCategoryColor, getLicenseStatus, getCountryFlag } from '../utils/utils'
 
 import '../styles/DriverTable.css'
 
@@ -43,7 +43,7 @@ const DriverTable: React.FC<DriverTableProps> = ({drivers}) => {
                   </td>
                   
                   <td className="driver-table-cell">{driver.developmentProgram}</td>
-                  <td className="driver-table-cell">{driver.nationality}</td>
+                  <td className="driver-table-cell">{driver.nationality} <span className="country-flag">{getCountryFlag(driver.nationality)}</span></td>
                   <td className="driver-table-cell points-cell">{driver.points}</td>
                   <td className="driver-table-cell">
                     <span className={`status-badge ${licenseStatus.color}`}>

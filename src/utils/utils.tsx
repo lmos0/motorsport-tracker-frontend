@@ -17,3 +17,39 @@ export const getLicenseStatus = (points:number): LicenseStatus => {
     if(points >= 30) return {text: 'Close', color: 'bg-yellow-600'}
     return {text: 'Not Eligible', color: 'bg-red-500'}
 }
+
+export const getCountryFlag = (nationality:string): string => {
+    const flags: {[key:string]: string} = {
+        'British': '🇬🇧',
+    'Italian': '🇮🇹',
+    'German': '🇩🇪',
+    'French': '🇫🇷',
+    'Spanish': '🇪🇸',
+    'Dutch': '🇳🇱',
+    'Belgian': '🇧🇪',
+    'Australian': '🇦🇺',
+    'American': '🇺🇸',
+    'Canadian': '🇨🇦',
+    'Brazilian': '🇧🇷',
+    'Mexican': '🇲🇽',
+    'Japanese': '🇯🇵',
+    'Chinese': '🇨🇳',
+    'Indian': '🇮🇳',
+    'Russian': '🇷🇺',
+    'Finnish': '🇫🇮',
+    'Danish': '🇩🇰',
+    'Swedish': '🇸🇪',
+    'Norwegian': '🇳🇴',
+    'Austrian': '🇦🇹',
+    'Swiss': '🇨🇭',
+    'Polish': '🇵🇱',
+    'Portuguese': '🇵🇹',
+    'Thai': '🇹🇭',
+    'New Zealander': '🇳🇿',
+    'Paraguayan': '🇵🇾',
+    'Irish': '🇮🇪',
+    'Czech': '🇨🇿',
+    'Colombian': '🇨🇴'
+    }
+    return flags[nationality] || ''
+}
