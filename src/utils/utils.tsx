@@ -13,9 +13,9 @@ export const getCategoryColor = (category: 'F2' | 'F3' | 'F4' | 'FRegional' | 'W
 }
 
 export const getLicenseStatus = (points:number): LicenseStatus => {
-    if(points >= 40) return {text: 'Eligible', color: 'bg-green-600'}
-    if(points >= 30) return {text: 'Close', color: 'bg-yellow-600'}
-    return {text: 'Not Eligible', color: 'bg-red-500'}
+    if(points >= 40) return {text: 'Eligible', color: 'license-status-eligible'}
+    if(points >= 30) return {text: 'Close', color: 'license-status-close'}
+    return {text: 'Not Eligible', color: 'license-status-not-eligible'}
 }
 
 export const getCountryFlag = (nationality:string): string => {

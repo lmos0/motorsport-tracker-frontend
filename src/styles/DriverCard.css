@@ -1,3 +1,4 @@
+
 .driver-card {
     background-color: white;
     border-radius: 0.5rem;
@@ -86,6 +87,18 @@
     font-weight: 600;
     font-size: 0.875rem;
     margin-top: 1rem;
+  }
+
+  .license-status-eligible {
+    background-color: #16a34a;
+  }
+  
+  .license-status-close {
+    background-color: #ca8a04;
+  }
+  
+  .license-status-not-eligible {
+    background-color: #ef4444;
   }
 
   .country-flag {
