@@ -1,6 +1,6 @@
 import { LicenseStatus } from "./types";
 
-export const getCategoryColor = (category: 'Formula 2' | 'Formula 3' | 'Formula 4' | 'FRegional' | 'WEC' | 'IndyCar'): string => {
+export const getCategoryColor = (category: 'Formula 2' | 'Formula 3' | 'Formula 4' | 'FRegional' | 'WEC' | 'IndyCar' | 'ELMS' | 'Formula E' | 'DTM'| 'Super Formula'| 'F1 Academy' | 'Other'): string => {
     switch(category){
         case 'Formula 2': return 'category-f2'
         case 'Formula 3': return 'category-f3'
@@ -8,6 +8,7 @@ export const getCategoryColor = (category: 'Formula 2' | 'Formula 3' | 'Formula 
         case 'FRegional': return 'category-fregional'
         case 'WEC': return 'category-wec'
         case 'IndyCar': return 'category-indycar'
+        case 'Formula E': return 'category-formulae'
         default: return 'category-default'
     }
 }

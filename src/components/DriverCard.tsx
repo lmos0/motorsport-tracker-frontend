@@ -12,6 +12,21 @@ const DriverCard: React.FC<DriverCardPropos> = ({driver}) => {
     const licenseStatus = getLicenseStatus(driver.points)
     const categoryColor = getCategoryColor(driver.category)
 
+    const calculateAge = () => {
+
+      if(!driver.dob) return 'N/A'
+
+        const dob = new Date(driver.dob)
+        const diff_ms = Date.now() - dob.getTime()
+        const age_dt = new Date(diff_ms)
+        return Math.abs(age_dt.getUTCFullYear
+        () - 1970)
+
+    }
+
+    const driverAge = calculateAge()
+
+
     return (
         <div className="driver-card">
       <div className={`driver-card-header ${categoryColor}`}></div>
@@ -34,6 +49,12 @@ const DriverCard: React.FC<DriverCardPropos> = ({driver}) => {
         
         <div className="driver-metadata">
         <input type="hidden" value={driver._id} />
+
+
+        <div className="age-info">
+                <div className="info-label">Age</div>
+                <div className="info-value">{driverAge}</div>
+              </div>
        
 
           <div className="team-info">

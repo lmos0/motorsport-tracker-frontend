@@ -41,9 +41,20 @@ const SearchControls: React.FC<SearchControlsProps> = ({searchQuery, setSearchQu
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
             >
-              {categories.map(category => (
-                <option key={category} value={category}>{category}</option>
-              ))}
+              {categories
+            .slice() // Create a copy to avoid mutating the original array
+            .sort((a, b) => {
+        // Push 'Other' to the end
+            if (a === 'Other') return 1;
+            if (b === 'Other') return -1;
+        // Regular alphabetical sort for other items
+        return a.localeCompare(b);
+      })
+      .map((category) => (
+        <option key={category} value={category}>
+          {category}
+        </option>
+      ))}
             </select>
           </div>
           
