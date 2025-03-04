@@ -25,9 +25,9 @@ const Footer = () => {
   </div>
 
   <div className="footer-bottom">
-    <p>&copy; {currentYear} FIA Super License Tracker. Open-source under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT License</a>.</p>
+    <p>{currentYear} FIA Super License Tracker. Open-source under the <a className='mit' href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT License</a>.</p>
     <div className="footer-links">
-      <a href="https://github.com/yourusername/super-license-tracker" target="_blank" rel="noopener noreferrer">GitHub</a>
+     <p>Created by <a href="https://github.com/lmos0" target="_blank" rel="noopener noreferrer">lmos0</a></p> 
       <a href="#">Contact</a>
     </div>
   </div>
