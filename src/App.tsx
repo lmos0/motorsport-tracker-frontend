@@ -1,10 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import Header from './components/Header'
 import SearchControls from './components/SearchControls'
 import DriverCard from './components/DriverCard'
 import DriverTable from './components/DriverTable'
 import InfoBox from './components/InfoBox'
 import { Driver, Points, ViewMode, } from './utils/types'
+import Footer from './components/Footer'
 
 import './App.css'
 
@@ -116,6 +117,7 @@ function App() {
       
       <InfoBox />
     </div>
+    <Footer></Footer>
   </div>
 );
 };
