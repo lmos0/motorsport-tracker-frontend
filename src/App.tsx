@@ -160,8 +160,39 @@ function App() {
             }))}  
           />
         )}
+
+        <InfoBox title='About' initialOpen={false}>
+          
+          <br />
+          <b className='info-box-text'>Disclaimer</b>
+          <p className='info-box-text'>This website is not affiliated with the FIA or FOM.</p>
+          <div className='info-box-list'>
+          <p>This is just a personal project by a motorsport fan who always struggled to figure out how many points a driver needs for a superlicence to race in F1. I do my best to keep everything updated and accurate, but there might be some mistakes. If you spot one, I'd really appreciate it if you let me know!</p>
+          <p></p>
+          </div>
+         
+        </InfoBox>
         
-        <InfoBox />
+        <InfoBox title="Super Licence Requirements" initialOpen={false}>
+                <p className="info-box-text">
+               To qualify for an FIA Super Licence, drivers must:
+                </p>
+          <ul className="info-box-list">
+            <li>Be at least 18 years old</li>
+            <li>Hold an International Grade A competition licence</li>
+            <li>Accumulate at least 40 points over a 3-year period in eligible racing series</li>
+            <li>Have completed at least 80% of two full seasons in eligible championships</li>
+            <li>Have driven at least 300km in a Formula One car at race speeds</li>
+            <li>The results from a maximum of 2 championships
+                can be accumulated from a single calendar year,
+                provided that the start date of the second
+                championship falls after the end date of the first
+                championship during the year in question</li>
+          </ul>
+          <p className="info-box-text">  
+          </p>
+        </InfoBox>
+     
       </div>
       <Footer />
     </div>
