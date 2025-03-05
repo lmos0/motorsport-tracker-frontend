@@ -8,11 +8,11 @@ const Header: React.FC = () => {
             <div className="header-glare"></div>
             <div className="header-content">
                 <div className="title-container">
-                    <h1 className="header-title">
+                  <a href="https://motorsport-tracker-frontend.onrender.com"><h1 className="header-title">
                         <span className="title-part">SUPER</span>
                         <span className="title-part">LICENCE</span>
                         <span className="title-accent">TRACKER</span>
-                    </h1>
+                    </h1></a>  
                     <div className="title-line"></div>
                 </div>
                 <p className="header-subtitle">
