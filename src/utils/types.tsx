@@ -22,3 +22,14 @@ export type ViewMode = 'cards' | 'table'
 export interface Points {
     [key:string]: number
 }
+
+export interface DriverResult {
+    _id:string;
+    championshipId:{
+        name:string,
+        year:number
+    }
+    year: number;
+    finalPosition: number
+    pointsEarned: number
+}

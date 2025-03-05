@@ -18,7 +18,7 @@ const DriverTable: React.FC<DriverTableProps> = ({drivers}) => {
             <tr className="driver-table-header">
               <th className="driver-table-cell">Driver</th>
               <th className="driver-table-cell">Category</th>
-              <th className="driver-table-cell">Team</th>
+              <th className="driver-table-cell">Development Program</th>
               <th className="driver-table-cell">Country</th>
               <th className="driver-table-cell points-cell">Points</th>
               <th className="driver-table-cell status-cell">Status</th>
