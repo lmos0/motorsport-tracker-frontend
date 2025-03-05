@@ -187,3 +187,264 @@
   flex-direction: column;
   height: 100%; /* Fill the parent height */
 }
+
+/* ResultsModal.css */
+.results-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.results-modal-content {
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.results-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.results-modal-header h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.results-modal-close {
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: #666;
+}
+
+.results-modal-body {
+  padding: 15px;
+}
+
+.results-loading,
+.results-error,
+.results-empty {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.results-list {
+  display: grid;
+  gap: 10px;
+}
+
+.results-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 4px;
+  
+}
+
+.results-item span {
+  font-weight: bold;
+  margin-right: 5px;
+  color: #333;
+}
+
+/* ResultsModal.css */
+.results-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.results-modal-content {
+  background-color: #ffffff;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 750px;
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
+  animation: scaleUp 0.3s ease-out forwards;
+}
+
+@keyframes scaleUp {
+  to {
+    transform: scale(1);
+  }
+}
+
+.results-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.results-modal-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+  font-weight: 600;
+}
+
+.results-modal-close {
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.2s ease;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.results-modal-close:hover {
+  color: #333;
+}
+
+.results-modal-body {
+  padding: 20px;
+}
+
+.results-loading,
+.results-error,
+.results-empty {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1.1em;
+}
+
+.results-list {
+  display: grid;
+  gap: 15px;
+}
+
+.results-item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #f1f3f5;
+  padding: 15px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  align-items: center;
+}
+
+.results-item:hover {
+  background-color: #e9ecef;
+}
+
+.results-item span {
+  font-weight: 600;
+  margin-right: 10px;
+  color: #495057;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.results-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.results-points {
+  background-color: #405e40;
+  color: white;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-weight: bold;
+  text-align: center;
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-points span {
+  color: white;
+  margin-right: 5px;
+  text-transform: uppercase;
+}
+
+/* Scrollbar Styling */
+.results-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.results-modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.results-modal-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.results-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.points-info-tooltip-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+ color: #666;
+  font-size: 0.875rem;
+}
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .results-item {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}

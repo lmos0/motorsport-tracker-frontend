@@ -16,7 +16,7 @@ const Footer = () => {
     <div className="footer-section">
       <h3 className="footer-title">Resources</h3>
       <ul className="footer-list">
-        <li><a href="#">Super License Points System</a></li>
+        <li><a href="https://www.fia.com/sites/default/files/documents/appendix_l_2025_publie_le_26_fevrier_2025_0.pdf">Super License Points System</a></li>
         <li><a href="#">FIA Racing Ladder</a></li>
         <li><a href="#">Development Programs</a></li>
         <li><a href="#">Race Calendar</a></li>
@@ -25,7 +25,7 @@ const Footer = () => {
   </div>
 
   <div className="footer-bottom">
-    <p>{currentYear} FIA Super License Tracker. Open-source under the <a className='mit' href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT License</a>.</p>
+    <p>{currentYear} Super License Tracker. Open-source under the <a className='mit' href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT License</a>.</p>
     <div className="footer-links">
      <p>Created by <a href="https://github.com/lmos0" target="_blank" rel="noopener noreferrer">lmos0</a></p> 
       <a href="#">Contact</a>
