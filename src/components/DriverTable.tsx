@@ -9,6 +9,18 @@ interface DriverTableProps {
 }
 
 const DriverTable: React.FC<DriverTableProps> = ({drivers}) => {
+
+  const formatCategory = (category: string) => {
+    const categoryMap: Record<string, string> = {
+      'Formula 2': 'F2',
+      'Formula 3': 'F3',
+      'Formula 4': 'F4',
+      'Formula E': 'FE',
+      'Super Formula': 'SF'
+    }
+
+    return categoryMap[category] || category
+  }
     
     return(
         <div className="driver-table-container">
@@ -38,7 +50,7 @@ const DriverTable: React.FC<DriverTableProps> = ({drivers}) => {
                   </td>
                   <td className="driver-table-cell">
                     <span className={`category-badge ${categoryColor}`}>
-                      {driver.category}
+                      {formatCategory(driver.category)}
                     </span>
                   </td>
                   
