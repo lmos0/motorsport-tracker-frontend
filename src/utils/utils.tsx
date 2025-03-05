@@ -9,6 +9,8 @@ export const getCategoryColor = (category: 'Formula 2' | 'Formula 3' | 'Formula 
         case 'WEC': return 'category-wec'
         case 'IndyCar': return 'category-indycar'
         case 'Formula E': return 'category-formulae'
+        case 'F1 Academy': return 'category-f1-academy'
+        case 'Other': return 'category-other'
         default: return 'category-default'
     }
 }
