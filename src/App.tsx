@@ -26,6 +26,7 @@ function App() {
 
         
         const response = await fetch('https://motorsport-tracker.onrender.com/api/drivers')
+        //const response = await fetch('http://localhost:3000/api/drivers')
         if (!response.ok) {
           throw new Error('Failed to fetch drivers')
         }
@@ -37,6 +38,7 @@ function App() {
         const pointsFetchPromises = data.map(async (driver: Driver) => {
           try {
             const pointsResponse = await fetch(`https://motorsport-tracker.onrender.com/api/results/${driver._id}/points`)
+            //const pointsResponse = await fetch(`http://localhost:3000/api/results/${driver._id}/points`)
             if (pointsResponse.ok) {
               const responseData = await pointsResponse.json()
               pointsData[driver._id] = responseData.totalPoints

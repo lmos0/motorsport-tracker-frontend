@@ -15,10 +15,13 @@ const InfoBox:React.FC = () => {
         <li>Accumulate at least 40 points over a 3-year period in eligible racing series</li>
         <li>Have completed at least 80% of two full seasons in eligible championships</li>
         <li>Have driven at least 300km in a Formula One car at race speeds</li>
+        <li>The results from a maximum of 2 championships
+            can be accumulated from a single calendar year,
+            provided that the start date of the second
+            championship falls after the end date of the first
+            championship during the year in question</li>
       </ul>
-      <p className="info-box-text">
-        Points are awarded based on final championship positions in various FIA-approved series 
-        including Formula 2, Formula 3, Formula 4, WEC, and IndyCar.
+      <p className="info-box-text">  
       </p>
     </div>
     )
