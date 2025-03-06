@@ -46,7 +46,7 @@ function App() {
               pointsData[driver._id] = 0
             }
           } catch (pointError) {
-            console.error(`Error fetching points for driver ${driver._id}:`, pointError)
+            //console.error(`Error fetching points for driver ${driver._id}:`, pointError)
             pointsData[driver._id] = 0
           }
         })
@@ -56,7 +56,7 @@ function App() {
         setPoints(pointsData)
 
       } catch (fetchError) {
-        console.error('Error in fetchDrivers:', fetchError)
+        //console.error('Error in fetchDrivers:', fetchError)
         setError(fetchError instanceof Error ? fetchError.message : 'An unknown error occurred')
         setDrivers([])
         setPoints({})
