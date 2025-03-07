@@ -55,7 +55,8 @@ export const getCountryFlag = (nationality:string): string => {
     'Colombian': '🇨🇴',
     'Bulgarian': '🇧🇬',
     'Peruvian': '🇵🇪',
-    'Singaporean': '🇸🇬'
+    'Singaporean': '🇸🇬',
+    'Emirati': '🇦🇪'
     }
     return flags[nationality] || ''
 }
