@@ -52,7 +52,8 @@ export const getCountryFlag = (nationality:string): string => {
     'Paraguayan': '🇵🇾',
     'Irish': '🇮🇪',
     'Czech': '🇨🇿',
-    'Colombian': '🇨🇴'
+    'Colombian': '🇨🇴',
+    'Bulgarian': '🇧🇬'
     }
     return flags[nationality] || ''
 }
