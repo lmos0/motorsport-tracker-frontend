@@ -25,7 +25,7 @@ const Footer = () => {
     <p>{currentYear} Super Licence Tracker. Open-source under the <a className='mit' href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT License</a>.</p>
     <div className="footer-links">
      <p>Created by <a href="https://github.com/lmos0" target="_blank" rel="noopener noreferrer">lmos0</a></p> 
-      <a href="#">Contact</a>
+      <a href="/report#page-title">Contact</a>
     </div>
   </div>
 </footer>
