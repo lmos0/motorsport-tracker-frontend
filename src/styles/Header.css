@@ -1,12 +1,25 @@
-.header {
-  background: #0a0a0a;
-  color: white;
-  position: relative;
-  overflow: hidden;
-  padding: 4rem 1rem;
-  border-bottom: 3px solid #e10600;
+/* Motorsport Theme Header */
+
+:root {
+  --racing-red: #e10600;
+  --racing-dark: #15151e;
+  --racing-silver: #d8d8d8;
+  --racing-accent: #ffb800;
+  --racing-white: #ffffff;
+  --racing-grey: #2a2a2a;
+  --racing-gradient: linear-gradient(135deg, var(--racing-red), #9e0400);
 }
 
+.header {
+  background: var(--racing-dark);
+  color: var(--racing-white);
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 1.5rem;
+  border-bottom: 5px solid var(--racing-red);
+}
+
+/* Checkered flag pattern */
 .racing-stripe {
   position: absolute;
   top: 0;
@@ -14,28 +27,62 @@
   width: 140%;
   height: 100%;
   background: repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 15px,
-      rgba(225,6,0,0.1) 15px,
-      rgba(225,6,0,0.1) 30px
+    45deg,
+    transparent,
+    transparent 15px,
+    rgba(225, 6, 0, 0.15) 15px,
+    rgba(225, 6, 0, 0.15) 30px
   );
   transform: skewX(-25deg);
 }
 
+/* Add secondary racing stripes */
+.racing-stripe-secondary {
+  position: absolute;
+  bottom: 0;
+  right: -10%;
+  width: 80%;
+  height: 40%;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 20px,
+    rgba(255, 184, 0, 0.07) 20px,
+    rgba(255, 184, 0, 0.07) 40px
+  );
+  transform: skewX(15deg);
+}
+
+/* Glossy reflection effect */
 .header-glare {
   position: absolute;
   top: -50%;
   right: -20%;
-  width: 60%;
+  width: 70%;
   height: 200%;
-  background: linear-gradient(45deg, 
-      rgba(255,255,255,0) 0%,
-      rgba(255,255,255,0.03) 50%,
-      rgba(255,255,255,0) 100%
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0) 100%
   );
   transform: rotate(15deg);
   animation: glare 8s infinite linear;
+  opacity: 0.8;
+}
+
+/* Carbon fiber texture background */
+.carbon-texture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(0deg, rgba(30, 30, 30, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 30, 30, 0.3) 1px, transparent 1px);
+  background-size: 4px 4px;
+  opacity: 0.1;
 }
 
 .header-content {
@@ -48,96 +95,249 @@
 
 .title-container {
   position: relative;
-  padding-left: 2rem;
+  padding-left: 2.5rem;
   overflow: hidden;
 }
 
 .header-title {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 3.5rem;
+  font-weight: 900;
   margin: 0 0 0.25rem 0;
-  line-height: 1;
+  line-height: 0.9;
   text-transform: uppercase;
 }
 
 .title-part {
   display: block;
   position: relative;
-  color: rgba(255,255,255,0.9);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   letter-spacing: -0.03em;
 }
 
 .title-accent {
-  color: #e10600;
+  color: var(--racing-red);
   display: block;
   font-weight: 900;
   letter-spacing: -0.02em;
   position: relative;
   margin-top: -0.25em;
+  text-shadow: 0 0 20px rgba(225, 6, 0, 0.3);
+}
+
+/* Add highlight to accent */
+.title-accent::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 100%;
+  height: 5%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
 }
 
 .title-line {
   position: absolute;
   left: 0;
-  bottom: -10px;
-  width: 120px;
-  height: 4px;
-  background: #e10600;
+  bottom: -12px;
+  width: 140px;
+  height: 6px;
+  background: var(--racing-gradient);
   transform-origin: left center;
   animation: lineExtend 0.8s 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  border-radius: 3px;
+}
+
+/* Add accent dot at end of line */
+.title-line::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 10px;
+  height: 10px;
+  background: var(--racing-accent);
+  border-radius: 50%;
 }
 
 .header-subtitle {
-  font-size: 1.1rem;
-  margin: 1.5rem 0 0 0;
-  padding-left: 2rem;
+  font-size: 1.2rem;
+  margin: 2rem 0 0 0;
+  padding-left: 2.5rem;
   position: relative;
-  font-weight: 300;
-  color: rgba(255,255,255,0.8);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .subtitle-text {
   position: relative;
   display: inline-block;
-  background: linear-gradient(90deg, rgba(225,6,0,0.15) 0%, transparent 100%);
-  padding: 0.5rem 1rem;
+  background: linear-gradient(90deg, rgba(225, 6, 0, 0.2) 0%, transparent 100%);
+  padding: 0.6rem 1.5rem;
+  border-left: 3px solid var(--racing-red);
 }
 
 .subtitle-line {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 40px;
-  height: 1px;
-  background: #e10600;
+  width: 50px;
+  height: 2px;
+  background: var(--racing-accent);
+}
+
+/* Header action button (optional) */
+.header-action {
+  display: inline-block;
+  margin-top: 2rem;
+  margin-left: 2.5rem;
+  background: var(--racing-gradient);
+  color: var(--racing-white);
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-action::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+  transition: all 0.5s;
+}
+
+.header-action:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(225, 6, 0, 0.3);
+}
+
+.header-action:hover::after {
+  left: 100%;
 }
 
 @keyframes glare {
-  0% { transform: rotate(15deg) translateX(-100%); }
-  100% { transform: rotate(15deg) translateX(100%); }
+  0% {
+    transform: rotate(15deg) translateX(-100%);
+  }
+  100% {
+    transform: rotate(15deg) translateX(100%);
+  }
 }
 
 @keyframes lineExtend {
-  0% { transform: scaleX(0); }
-  100% { transform: scaleX(1); }
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* Speed lines animation */
+.speed-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.05;
+}
+
+.speed-line {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background: var(--racing-white);
+  opacity: 0.7;
+  transform: translateX(-50%) skewX(-20deg);
+  animation: speedLine 3s linear infinite;
+}
+
+.speed-line:nth-child(1) {
+  left: 10%;
+  animation-delay: 0.1s;
+  height: 60%;
+  top: 20%;
+}
+
+.speed-line:nth-child(2) {
+  left: 30%;
+  animation-delay: 0.5s;
+}
+
+.speed-line:nth-child(3) {
+  left: 50%;
+  animation-delay: 0.9s;
+  height: 75%;
+  top: 15%;
+}
+
+.speed-line:nth-child(4) {
+  left: 70%;
+  animation-delay: 0.2s;
+}
+
+.speed-line:nth-child(5) {
+  left: 90%;
+  animation-delay: 0.7s;
+  height: 65%;
+  top: 25%;
+}
+
+@keyframes speedLine {
+  0% {
+    transform: translateX(-800%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(800%) skewX(-20deg);
+  }
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 4rem 1rem;
+  }
+
   .header-title {
-      font-size: 2rem;
+    font-size: 2.5rem;
   }
-  
+
   .header-subtitle {
-      font-size: 0.9rem;
-      padding-left: 1rem;
+    font-size: 1rem;
+    padding-left: 1.5rem;
   }
-  
+
   .title-container {
-      padding-left: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .title-line {
+    width: 100px;
+    height: 4px;
+  }
+
+  .header-action {
+    margin-left: 1.5rem;
+    padding: 0.6rem 1.5rem;
   }
 }
 
-a{
+a {
   text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: var(--racing-accent);
 }
