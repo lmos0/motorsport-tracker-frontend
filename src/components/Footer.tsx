@@ -1,7 +1,13 @@
 import '../styles/Footer.css';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate()
+
+  const handleContactClick = () => {
+    navigate('/report');
+  };
   
   return (
     <footer className="footer">
@@ -25,7 +31,7 @@ const Footer = () => {
     <p>{currentYear} Super Licence Tracker. Open-source under the <a className='mit' href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT License</a>.</p>
     <div className="footer-links">
      <p>Created by <a href="https://github.com/lmos0" target="_blank" rel="noopener noreferrer">lmos0</a></p> 
-      <a href="/report">Contact</a>
+     <button onClick={handleContactClick} style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textDecoration: 'underline', padding: 0, font: 'inherit' }}>Contact</button>
     </div>
   </div>
 </footer>
@@ -35,4 +41,3 @@ const Footer = () => {
 
 export default Footer;
 
-//teste
