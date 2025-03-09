@@ -11,7 +11,7 @@ import { Driver, Points, ViewMode } from './utils/types';
 
 import './App.css';
 
-// Create a HomePage component to contain your main content
+
 const HomePage = () => {
   const [drivers, setDrivers] = useState<Driver[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -197,7 +197,7 @@ const HomePage = () => {
   );
 };
 
-// Main App component with routing
+
 function App() {
   return (
     <Router>
